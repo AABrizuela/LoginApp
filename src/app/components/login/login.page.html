@@ -1,0 +1,27 @@
+<ion-app>
+<ion-header>
+  <ion-toolbar>
+    <ion-title color="primary">Bienvenido</ion-title>
+  </ion-toolbar>
+</ion-header>
+<ion-content>  
+  <img class="icon" src="assets/icon/UAC_insignia.png">
+  <ion-item class="inputTxt">
+    <ion-label position="floating">Correo Electrónico</ion-label>
+    <ion-input type="email" [(ngModel)]="email"></ion-input>
+  </ion-item>
+  <br>
+  <ion-item class="inputTxt">
+    <ion-label position="floating">Contraseña</ion-label>
+    <ion-input type="password" [(ngModel)]="password"></ion-input>
+  </ion-item>
+  <br>
+  <ion-button (click)="OnSubmitLogin()" class="btnEntrar">
+    Entrar
+  </ion-button>
+  <ion-button (click)="limpiar()" class="btnLimpiar">
+    Limpiar
+  </ion-button>  
+</ion-content>
+</ion-app>
+

@@ -14,11 +14,16 @@ import { firebaseConfig } from "../environments/environment";
 import { AngularFireModule } from "@angular/fire";
 import { AngularFireAuthModule} from "@angular/fire/auth";
 
+import { AuthGuard } from "./guards/auth.guard";
+import { NoLoginGuard } from "./guards/no-login.guard";
+
+
 @NgModule({
   declarations: [AppComponent],
   entryComponents: [],
   imports: [BrowserModule, IonicModule.forRoot(), AppRoutingModule,
-            AngularFireModule.initializeApp(firebaseConfig), AngularFireAuthModule],
+            AngularFireModule.initializeApp(firebaseConfig), AngularFireAuthModule,
+          AuthGuard, NoLoginGuard],
   providers: [
     StatusBar,
     SplashScreen,
